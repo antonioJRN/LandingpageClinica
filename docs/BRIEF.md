@@ -98,3 +98,11 @@ split stage pede um argumento de dois lados; cutlist é energia de festa, não d
 começa manchado e fica branco quando você passa pela parte correspondente. No fim, o
 sorriso grande acende dente por dente e o botão final envia a mensagem que o visitante
 montou, com os tratamentos que ele escolheu ao longo da página.
+
+## Revisão 2 (pedido: abertura mais leve, menos seções, mais persuasivo)
+
+- Fundo do herói trocado: o filtro de textura em tela cheia (pesado no celular) virou gradientes e três veios finos.
+- Cortadas as seções "Sem medo" e "Como marcar". O passo a passo agora mora no fechamento.
+- Nova ordem, com a prova logo no início: herói, antes e depois, onde dói (o dente que se abre), tratamentos, equipe, onde estamos, marcar.
+- Textos reescritos com foco em dor e solução, com o botão "Marcar consulta" em mais pontos da página (herói, antes e depois, fim dos tratamentos, onde estamos, fechamento).
+- Navegação em sorriso volta a ter 7 dentes. Página passou de cerca de 18 para cerca de 13 telas.

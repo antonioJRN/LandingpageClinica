@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Clínica Sorrir Mais · Odontologia em Macaúbas, BA</title>
-<meta name="description" content="Clínica odontológica em Macaúbas, Bahia. Limpeza, clareamento, aparelho, canal, implante e atendimento para crianças. Marque sua consulta pelo WhatsApp.">
+<meta name="description" content="Clínica Sorrir Mais em Macaúbas, BA: três dentistas e 12 tratamentos num só lugar, de segunda a sábado. Marque sua avaliação pelo WhatsApp.">
 <meta name="theme-color" content="#091430">
 <meta property="og:title" content="Clínica Sorrir Mais · Macaúbas, BA">
 <meta property="og:description" content="Do esmalte à raiz, cuidado em cada camada. Marque sua consulta pelo WhatsApp.">
@@ -59,14 +59,6 @@
       <rect x="-50" y="-50" width="500" height="650" fill="#fff"/>
       <use href="#dente" fill="#000" transform="translate(200 250) scale(0.82) translate(-200 -250)"/>
     </mask>
-    <filter id="f-pedra" x="0" y="0" width="100%" height="100%">
-      <feTurbulence type="fractalNoise" baseFrequency="0.0032 0.011" numOctaves="5" seed="11" result="n"/>
-      <feColorMatrix in="n" type="matrix" values="0 0 0 0 0.52  0 0 0 0 0.74  0 0 0 0 0.94  2.4 0 0 0 -1.12"/>
-    </filter>
-    <filter id="f-pedra2" x="0" y="0" width="100%" height="100%">
-      <feTurbulence type="fractalNoise" baseFrequency="0.006 0.02" numOctaves="4" seed="3" result="n"/>
-      <feColorMatrix in="n" type="matrix" values="0 0 0 0 0.16  0 0 0 0 0.36  0 0 0 0 0.62  2.2 0 0 0 -0.9"/>
-    </filter>
     <filter id="f-blur"><feGaussianBlur stdDeviation="6"/></filter>
   </defs>
 </svg>
@@ -86,11 +78,9 @@
   <nav class="arcada" aria-label="Partes da página">
     <ol>
       <li><a href="#inicio" data-arcada="inicio"><span>Início</span></a></li>
-      <li><a href="#sem-medo" data-arcada="sem-medo"><span>Sem medo</span></a></li>
-      <li><a href="#camadas" data-arcada="camadas"><span>Camadas</span></a></li>
-      <li><a href="#como-marcar" data-arcada="como-marcar"><span>Como marcar</span></a></li>
-      <li><a href="#tratamentos" data-arcada="tratamentos"><span>Tratamentos</span></a></li>
       <li><a href="#resultados" data-arcada="resultados"><span>Antes e depois</span></a></li>
+      <li><a href="#camadas" data-arcada="camadas"><span>Onde dói</span></a></li>
+      <li><a href="#tratamentos" data-arcada="tratamentos"><span>Tratamentos</span></a></li>
       <li><a href="#equipe" data-arcada="equipe"><span>Equipe</span></a></li>
       <li><a href="#onde" data-arcada="onde"><span>Onde estamos</span></a></li>
       <li><a href="#marcar" data-arcada="marcar"><span>Marcar</span></a></li>
@@ -106,13 +96,15 @@
 <main>
 
   <!-- 1 · ACOLHIMENTO: planos em camadas, o dente como objeto de estudo -->
-  <section id="inicio" class="act act--hero" data-sc-act="pin" data-sc-span="2" data-arcada-sec>
+  <section id="inicio" class="act act--hero" data-sc-act="pin" data-sc-span="1.4" data-arcada-sec>
     <div data-sc-stage class="hero">
       <div class="hero__plane hero__pedra" aria-hidden="true">
         <svg viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
-          <rect width="1600" height="1000" fill="#091430"/>
-          <rect width="1600" height="1000" filter="url(#f-pedra2)"/>
-          <rect width="1600" height="1000" filter="url(#f-pedra)" opacity="0.55"/>
+          <g fill="none" stroke="#8AAEFF" stroke-linecap="round">
+            <path d="M-40 760C260 690 420 820 720 700S1180 560 1640 640" stroke-opacity="0.10" stroke-width="2"/>
+            <path d="M-40 840C300 790 520 900 860 800S1300 700 1640 760" stroke-opacity="0.06" stroke-width="1.4"/>
+            <path d="M-40 220C320 300 600 160 900 240S1360 340 1640 260" stroke-opacity="0.05" stroke-width="1.4"/>
+          </g>
         </svg>
       </div>
 
@@ -146,13 +138,13 @@
         </div>
       </div>
 
-      <div class="hero__copy" data-sc-cue="0 0.6 0">
-        <h1 class="sc-display hero__titulo">Sorrir mais começa com um oi.</h1>
-        <p class="sc-body hero__sub">Clínica odontológica em Macaúbas, Bahia. De segunda a sábado, com marcação pelo WhatsApp.</p>
+      <div class="hero__copy" data-sc-cue="0 0.9 0">
+        <h1 class="sc-display hero__titulo">O sorriso que você quer, aqui em Macaúbas.</h1>
+        <p class="sc-body hero__sub">Três dentistas e 12 tratamentos num só lugar. Marque sua avaliação pelo WhatsApp em menos de um minuto.</p>
         <a class="btn btn--primary" href="#marcar" data-wa>Marcar consulta</a>
+        <p class="hero__horario">Segunda a sexta, 07h30 às 18h00 · Sábado, 07h00 às 12h00</p>
       </div>
 
-      <p class="hero__batida sc-display" data-sc-cue="0.52 1 0.2 0.12">Do esmalte à raiz, <em>cuidado em cada camada.</em></p>
 
       <div class="hero__plane hero__bolhas" aria-hidden="true">
         <svg viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
@@ -167,29 +159,46 @@
             <use href="#brilho" transform="translate(1390 300) scale(1.6)" opacity="0.8"/>
             <use href="#brilho" transform="translate(880 210) scale(0.9)" opacity="0.6"/>
           </g>
-          <circle cx="1500" cy="980" r="90" fill="#5B8CFF" opacity="0.06" filter="url(#f-blur)"/>
+          
         </svg>
       </div>
     </div>
   </section>
 
-  <!-- 2 · RECONHECIMENTO: o silêncio antes do pico -->
-  <section id="sem-medo" class="act act--quieto sc-section" data-sc-act="flow" data-arcada-sec>
-    <div class="sc-wrap quieto">
-      <div class="quieto__linhas" data-sc-in data-sc-stagger="80">
-        <p>Aquela dor que você vem deixando pra depois.</p>
-        <p>O sorriso escondido na foto de família.</p>
-        <p>O medo da cadeira, que quase ninguém comenta.</p>
-        <p class="quieto__virada">Aqui, a primeira consulta é uma conversa.</p>
+  <!-- 2 · PROVA: antes e depois reais, logo depois do herói -->
+  <section id="resultados" class="act act--resultados sc-section" data-sc-act="flow" data-arcada-sec>
+    <div class="sc-wrap resultados">
+      <div class="resultados__texto" data-sc-in data-sc-stagger="70">
+        <h2 class="sc-display sc-display--lg">Resultados reais, de pacientes daqui.</h2>
+        <p class="sc-body">Arraste o dente e veja a diferença. Casos atendidos na clínica e publicados no nosso Instagram.</p>
+        <div class="casos" role="group" aria-label="Escolha o caso">
+          <button type="button" class="chip" aria-pressed="true" data-caso="0">Caso 1</button>
+          <button type="button" class="chip" aria-pressed="false" data-caso="1">Caso 2</button>
+        </div>
+        <a class="btn btn--primary resultados__cta" href="#marcar" data-wa>Marcar consulta</a>
       </div>
+
+      <figure class="compara" data-sc-in>
+        <div class="compara__quadro" style="--pos: 50%">
+          <img class="compara__depois" src="assets/fotos/caso1-depois.webp" width="610" height="290" alt="Depois: sorriso com dentes da frente reconstruídos, proporção e brilho uniformes.">
+          <img class="compara__antes" src="assets/fotos/caso1-antes.webp" width="610" height="290" alt="Antes: dentes da frente desgastados, com bordas irregulares.">
+          <span class="compara__rot compara__rot--antes" aria-hidden="true">Antes</span>
+          <span class="compara__rot compara__rot--depois" aria-hidden="true">Depois</span>
+          <span class="compara__linha" aria-hidden="true">
+            <span class="compara__alca"><svg viewBox="0 0 400 520"><use href="#dente"/></svg></span>
+          </span>
+          <input class="compara__range" type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois">
+        </div>
+        <figcaption class="compara__legenda">Desgastes associados ao bruxismo, com proporção e contorno do sorriso devolvidos. Caso do Dr. Matheus Leão.</figcaption>
+      </figure>
     </div>
   </section>
 
-  <!-- 3 · ESPANTO (pico): o dente se abre em camadas -->
-  <section id="camadas" class="act act--camadas" data-sc-act="pin" data-sc-span="3.8" data-arcada-sec>
+  <!-- 3 · PICO: o dente se abre e cada camada mostra uma dor e a solução -->
+  <section id="camadas" class="act act--camadas" data-sc-act="pin" data-sc-span="3.2" data-arcada-sec>
     <div data-sc-stage class="camadas" data-camada="">
       <div class="camadas__cabeca" data-sc-cue="0 0.2 0 0.08">
-        <h2 class="sc-display sc-display--md">Um dente tem quatro camadas.<br>A gente cuida de todas.</h2>
+        <h2 class="sc-display sc-display--md">Onde dói?<br>A gente cuida de cada camada.</h2>
       </div>
 
       <div class="camadas__arte" aria-hidden="true">
@@ -225,59 +234,30 @@
       <div class="camadas__textos">
         <article class="camada-txt" data-sc-cue="0.2 0.42">
           <h3><span class="tinta tinta--esmalte"></span>Esmalte</h3>
-          <p>A parte que todo mundo vê, e a mais dura do corpo. Limpeza, clareamento e restaurações mantêm essa casca forte e bonita.</p>
+          <p>Dente manchado, lascado ou desgastado? Clareamento, facetas e restauração devolvem cor e forma ao que todo mundo vê.</p>
         </article>
         <article class="camada-txt" data-sc-cue="0.38 0.6">
           <h3><span class="tinta tinta--dentina"></span>Dentina</h3>
-          <p>Fica logo abaixo do esmalte. Quando a cárie chega aqui, aparece a sensibilidade ao gelado e ao doce. Tratar cedo é mais simples.</p>
+          <p>Sensibilidade ao gelado ou ao doce? É a cárie chegando. Tratada agora, o tratamento é mais simples e mais rápido.</p>
         </article>
         <article class="camada-txt" data-sc-cue="0.56 0.8">
           <h3><span class="tinta tinta--polpa"></span>Polpa</h3>
-          <p>O nervo do dente. Dor que lateja à noite costuma vir daqui, e o tratamento de canal salva o dente em vez de arrancar.</p>
+          <p>Dor que lateja à noite? Vem do nervo. O tratamento de canal tira a dor e salva o seu dente.</p>
         </article>
         <article class="camada-txt" data-sc-cue="0.76 1 0.16 0">
           <h3><span class="tinta tinta--raiz"></span>Raiz e gengiva</h3>
-          <p>A base de tudo. Gengiva que sangra é sinal de alerta. É aqui que entram o cuidado com a gengiva e, quando falta um dente, o implante.</p>
+          <p>Gengiva sangrando ou dente faltando? Cuidamos da base do sorriso com cirurgia, prótese e implante.</p>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- 4 · ALÍVIO: corte para o claro -->
-  <section id="como-marcar" class="act act--claro" data-sc-act="flow" data-arcada-sec>
-    <div class="claro__painel" data-sc-reveal="up" data-sc-reveal-at="0 0.28">
-      <div class="sc-wrap passos">
-        <div class="passos__cabeca" data-sc-in>
-          <h2 class="sc-display sc-display--lg">Marcar é simples assim.</h2>
-          <p class="sc-body">Sem formulário comprido e sem ligação em horário de trabalho. Tudo pelo WhatsApp.</p>
-        </div>
-        <ol class="passos__lista" data-sc-in data-sc-stagger="70">
-          <li>
-            <span class="passos__n">1</span>
-            <h3>Mande um oi</h3>
-            <p>Diga seu nome e o que está sentindo. Pode ser só "quero uma avaliação".</p>
-          </li>
-          <li>
-            <span class="passos__n">2</span>
-            <h3>Combine o horário</h3>
-            <p>A equipe confirma com você o dia e o período que cabem na sua rotina.</p>
-          </li>
-          <li>
-            <span class="passos__n">3</span>
-            <h3>Avaliação sem pressa</h3>
-            <p>O dentista examina, explica o que viu e monta com você o plano de tratamento.</p>
-          </li>
-        </ol>
-      </div>
-    </div>
-  </section>
-
-  <!-- 5 · CURIOSIDADE: um dente para cada tratamento -->
-  <section id="tratamentos" class="act act--trilho" data-sc-act="pan" data-sc-span="5.6" data-arcada-sec>
+  <!-- 4 · AMPLITUDE: um dente para cada tratamento -->
+  <section id="tratamentos" class="act act--trilho" data-sc-act="pan" data-sc-span="4.4" data-arcada-sec>
     <div data-sc-stage class="trilho">
       <div class="trilho__rail" data-sc-pan="0.04">
         <div class="trilho__abre">
-          <h2 class="sc-display sc-display--md">Tratamentos completos, num só lugar.</h2>
+          <h2 class="sc-display sc-display--md">Tudo que seu sorriso precisa, num só lugar.</h2>
           <p class="sc-body">Toque em <strong>Quero esse</strong> e o tratamento já entra na sua mensagem de agendamento.</p>
         </div>
 
@@ -404,44 +384,17 @@
 
         <div class="trilho__fecha">
           <p class="sc-display">Não sabe qual é o seu caso?</p>
-          <p class="sc-body">Normal. Marque uma avaliação e a gente descobre junto.</p>
+          <p class="sc-body">Marque uma avaliação. O dentista examina, explica e monta o plano com você.</p>
+          <a class="btn btn--primary" href="#marcar" data-wa>Marcar consulta</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 6 · PROVA: antes e depois reais, arrastando -->
-  <section id="resultados" class="act act--resultados sc-section" data-sc-act="flow" data-arcada-sec>
-    <div class="sc-wrap resultados">
-      <div class="resultados__texto" data-sc-in data-sc-stagger="70">
-        <h2 class="sc-display sc-display--lg">Antes e depois, de verdade.</h2>
-        <p class="sc-body">Casos atendidos aqui na clínica e publicados no nosso Instagram. Arraste o dente para comparar.</p>
-        <div class="casos" role="group" aria-label="Escolha o caso">
-          <button type="button" class="chip" aria-pressed="true" data-caso="0">Caso 1</button>
-          <button type="button" class="chip" aria-pressed="false" data-caso="1">Caso 2</button>
-        </div>
-      </div>
-
-      <figure class="compara" data-sc-in>
-        <div class="compara__quadro" style="--pos: 50%">
-          <img class="compara__depois" src="assets/fotos/caso1-depois.webp" width="610" height="290" alt="Depois: sorriso com dentes da frente reconstruídos, proporção e brilho uniformes.">
-          <img class="compara__antes" src="assets/fotos/caso1-antes.webp" width="610" height="290" alt="Antes: dentes da frente desgastados, com bordas irregulares.">
-          <span class="compara__rot compara__rot--antes" aria-hidden="true">Antes</span>
-          <span class="compara__rot compara__rot--depois" aria-hidden="true">Depois</span>
-          <span class="compara__linha" aria-hidden="true">
-            <span class="compara__alca"><svg viewBox="0 0 400 520"><use href="#dente"/></svg></span>
-          </span>
-          <input class="compara__range" type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois">
-        </div>
-        <figcaption class="compara__legenda">Desgastes associados ao bruxismo, com proporção e contorno do sorriso devolvidos. Caso do Dr. Matheus Leão.</figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <!-- 7 · INTIMIDADE: quem atende -->
+  <!-- 5 · CONFIANÇA: quem atende -->
   <section id="equipe" class="act act--equipe sc-section" data-sc-act="flow" data-arcada-sec>
     <div class="sc-wrap equipe">
-      <h2 class="sc-display sc-display--lg equipe__titulo" data-sc-in>Quem cuida do seu sorriso.</h2>
+      <h2 class="sc-display sc-display--lg equipe__titulo" data-sc-in>Três dentistas cuidando de você.</h2>
       <div class="equipe__gente" data-sc-in data-sc-stagger="80">
         <figure class="pessoa">
           <img src="assets/fotos/dr-matheus-leao.webp" width="240" height="300" loading="lazy" alt="Dr. Matheus Leão, de jaleco azul-marinho.">
@@ -471,14 +424,14 @@
     </div>
   </section>
 
-  <!-- 8 · PERTENCIMENTO: o lugar -->
+  <!-- 6 · LUGAR -->
   <section id="onde" class="act act--onde sc-section" data-sc-act="flow" data-arcada-sec>
     <div class="sc-wrap onde">
       <figure class="onde__foto" data-sc-reveal="iris" data-sc-reveal-at="0.06 0.4">
         <img src="assets/fotos/fachada.webp" width="610" height="550" loading="lazy" alt="Fachada da Clínica Sorrir Mais: vitrine azul-marinho com a placa da clínica, a lista de procedimentos e o horário de funcionamento.">
       </figure>
       <div class="onde__texto" data-sc-in data-sc-stagger="70">
-        <h2 class="sc-display sc-display--lg">Aqui em Macaúbas.</h2>
+        <h2 class="sc-display sc-display--lg">Fácil de chegar, em Macaúbas.</h2>
         <p class="sc-body" data-config="endereco">Procure a fachada azul com a placa da Clínica Sorrir, em Macaúbas, Bahia.</p>
         <dl class="onde__dados" data-config="horarios"></dl>
         <p class="onde__links">
@@ -486,12 +439,11 @@
           <a class="link" href="#" data-config="instagram" target="_blank" rel="noopener">Instagram</a>
           <a class="link" href="#marcar" data-wa data-config="fone">(77) 99999-4451</a>
         </p>
-        <p class="onde__pedra">As cores deste site vêm do quartzito Azul Macaúbas, a pedra azul da nossa terra, e do azul da nossa marca.</p>
       </div>
     </div>
   </section>
 
-  <!-- 9 · DECISÃO: o sorriso se completa e a mensagem se monta -->
+  <!-- 7 · DECISÃO: o sorriso se completa e a mensagem se monta -->
   <section id="marcar" class="act act--marcar" data-sc-act="flow" data-arcada-sec>
     <div class="sc-wrap marcar">
       <div class="sorriso" aria-hidden="true">
@@ -500,8 +452,13 @@
 
       <div class="marcar__grade">
         <div class="marcar__cabeca">
-          <h2 class="sc-display sc-display--lg">Pronto. Agora é só mandar o oi.</h2>
-          <p class="sc-body">Monte a mensagem aqui. O WhatsApp abre com tudo escrito, é só enviar.</p>
+          <h2 class="sc-display sc-display--lg">Sua avaliação começa com um oi.</h2>
+          <p class="sc-body">Escolha o que você precisa e toque em enviar. O WhatsApp abre com a mensagem pronta e a equipe combina o melhor horário com você.</p>
+          <ul class="marcar__garantias">
+            <li>Atendimento de segunda a sábado</li>
+            <li>Três dentistas, 12 tratamentos</li>
+            <li>Sem ligação e sem fila de espera para marcar</li>
+          </ul>
         </div>
 
         <form class="msg" novalidate>
