@@ -367,6 +367,7 @@ body { background: var(--sc-canvas); }
   border-left: 2px solid var(--accent-texto); border-bottom: 2px solid var(--accent-texto); transform: rotate(-45deg);
 }
 .msg { display: grid; gap: var(--sc-5); }
+.msg__reserva { margin: calc(var(--sc-2) * -1) 0 0; font-size: var(--sc-t-sm); color: var(--sc-ink-soft); text-align: center; }
 .campo { border: 0; margin: 0; padding: 0; display: grid; gap: var(--sc-2); }
 .campo > span, .campo legend { font-size: var(--sc-t-sm); font-weight: 600; padding: 0; margin-bottom: var(--sc-2); }
 .campo input {

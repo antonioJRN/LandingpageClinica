@@ -158,7 +158,13 @@ var CONFIG = {
     if (per) m += '\n' + per;
     return m;
   }
-  function atualiza() { balao.textContent = mensagem(); }
+  // o botão final é um link de verdade (não window.open): abre o WhatsApp mesmo em navegadores que bloqueiam janelas
+  var envio = form.querySelector('[data-envio]');
+  function atualiza() {
+    var m = mensagem();
+    balao.textContent = m;
+    envio.href = waLink(m);
+  }
 
   function sincronizaCards() {
     var sel = valores(chipsTrat);
@@ -195,7 +201,7 @@ var CONFIG = {
   nome.addEventListener('input', atualiza);
   form.addEventListener('submit', function (e) {
     e.preventDefault();
-    window.open(waLink(mensagem()), '_blank', 'noopener');
+    envio.click();
   });
   atualiza();
 
