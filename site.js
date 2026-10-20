@@ -203,6 +203,7 @@ var CONFIG = {
   var secs = Array.prototype.slice.call(document.querySelectorAll('[data-arcada-sec]'));
   var dentes = {};
   document.querySelectorAll('[data-arcada]').forEach(function (a) { dentes[a.getAttribute('data-arcada')] = a; });
+  var heroSec = q('#inicio');
   var camadasSec = q('#camadas'), camadasStage = camadasSec.querySelector('.camadas');
   var marcarSec = q('#marcar');
   var atual = -1, camadaAtual = null, tick = false;
@@ -233,6 +234,9 @@ var CONFIG = {
       });
       atual = idx;
     }
+
+    // a abertura não é um ato do engine: o progresso dela vem da própria rolagem
+    if (!reduce) heroSec.style.setProperty('--sc-p', Math.min(1, Math.max(0, window.scrollY / heroSec.offsetHeight)).toFixed(3));
 
     var p = parseFloat(camadasSec.style.getPropertyValue('--sc-p')) || 0;
     var c = p < 0.2 ? '' : p < 0.4 ? 'esmalte' : p < 0.58 ? 'dentina' : p < 0.78 ? 'polpa' : 'raiz';
