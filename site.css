@@ -18,7 +18,7 @@
   --polpa:       #E07A7F;
   --raiz:        #D9C7A2;
   --mancha:      #8F8461;
-  --bar-h: 4.25rem;
+  --bar-h: 3.5rem;
 }
 
 /* fundo claro (esmalte): tinta e acento redefinidos com a cor junto */
@@ -57,7 +57,7 @@ body { background: var(--sc-canvas); }
 .btn--primary { background: var(--sc-accent); color: var(--sc-accent-ink); box-shadow: var(--sc-e2); }
 .btn--primary:hover { background: #4A78F0; }
 .btn--grande { padding: 1.1rem 1.8rem; font-size: var(--sc-t-base); width: 100%; }
-.btn--bar { background: var(--sc-accent); color: var(--sc-accent-ink); padding: 0.7rem 1.1rem; }
+.btn--bar { background: var(--sc-accent); color: var(--sc-accent-ink); padding: 0.55rem 1rem; font-size: var(--sc-t-xs); }
 .btn--bar:hover { background: #4A78F0; }
 .btn__wa { width: 1.1rem; height: 1.1rem; fill: currentColor; }
 .btn[disabled] { opacity: 0.5; cursor: not-allowed; }
@@ -82,8 +82,8 @@ body { background: var(--sc-canvas); }
 .marca { display: inline-flex; align-items: flex-end; gap: 0.15rem; justify-self: start; text-decoration: none; color: #FFFFFF; }
 .marca__txt { display: grid; line-height: 0.9; }
 .marca__txt small { font-family: var(--sc-font-display); font-weight: 700; font-size: 0.56rem; letter-spacing: 0.14em; text-transform: uppercase; }
-.marca__txt b { font-family: var(--sc-font-display); font-weight: 800; font-size: 1.45rem; letter-spacing: -0.03em; }
-.marca__dente { width: 1.6rem; height: auto; margin-bottom: 0.1rem; color: #FFFFFF; overflow: visible; }
+.marca__txt b { font-family: var(--sc-font-display); font-weight: 800; font-size: 1.25rem; letter-spacing: -0.03em; }
+.marca__dente { width: 1.4rem; height: auto; margin-bottom: 0.1rem; color: #FFFFFF; overflow: visible; }
 .bar .btn { justify-self: end; }
 
 /* A arcada: sete dentes numa curva de sorriso */
@@ -139,7 +139,13 @@ body { background: var(--sc-canvas); }
 
 /* ------------------------------------------------------- 1 · o herói -- */
 /* a abertura não trava a rolagem: um pouco menor que a tela, para a próxima seção aparecer */
-.hero { position: relative; height: min(92svh, 60rem); min-height: 34rem; overflow: clip; background: #091430; isolation: isolate; }
+/* o texto fica no fluxo, abaixo da barra: em tela baixa a seção cresce em vez de esconder o texto sob a barra */
+.hero {
+  position: relative; overflow: clip; background: #091430; isolation: isolate;
+  min-height: min(92svh, 60rem);
+  display: flex; flex-direction: column; justify-content: flex-end;
+  padding: calc(var(--bar-h) + var(--sc-6)) var(--sc-gutter) clamp(2.5rem, 11vh, 7rem);
+}
 .hero__plane { position: absolute; pointer-events: none; }
 .hero__plane svg { width: 100%; height: 100%; max-width: none; }
 
@@ -182,8 +188,7 @@ body { background: var(--sc-canvas); }
 }
 
 .hero__copy {
-  position: absolute; z-index: var(--sc-z-copy);
-  left: var(--sc-gutter); bottom: clamp(3rem, 13vh, 8rem);
+  position: relative; z-index: var(--sc-z-copy);
   max-width: min(50rem, 54vw);
 }
 .hero__horario { margin: var(--sc-4) 0 0; font-size: var(--sc-t-sm); color: #C3CDE4; }
@@ -399,22 +404,22 @@ body { background: var(--sc-canvas); }
 
 /* ---------------------------------------------------------- celular -- */
 @media (max-width: 860px) {
-  :root { --bar-h: 3.75rem; }
+  :root { --bar-h: 3.25rem; }
   .bar { grid-template-columns: auto 1fr auto; gap: var(--sc-3); }
   .marca__txt { display: none; }
-  .marca__dente { width: 1.6rem; }
+  .marca__dente { width: 1.35rem; }
   .arcada { justify-self: center; }
   .arcada ol { gap: 0.2rem; padding-inline: 0.3rem; }
-  .btn--bar { padding: 0.65rem 0.9rem; }
-  .btn--bar span { font-size: var(--sc-t-xs); }
+  .btn--bar { padding: 0.5rem 0.8rem; }
 
-  .hero { height: 88svh; min-height: 36rem; }
-  .hero__dente-pos { right: auto; left: 50%; top: calc(var(--bar-h) + 3svh); width: min(48vw, 28svh);
-    transform: translate3d(-50%, calc(var(--sc-p, 0) * -50px), 0) rotate(calc(var(--sc-p, 0) * 12deg - 5deg)) scale(calc(1 + var(--sc-p, 0) * 0.08)); }
-  .hero__anel { width: min(92vw, 52svh); right: 50%; top: calc(var(--bar-h) + 3svh + min(24vw, 14svh) * 1.3);
+  /* no celular o dente também entra no fluxo: em cima, e o texto embaixo, sem sobrepor */
+  .hero { min-height: 88svh; padding-top: calc(var(--bar-h) + var(--sc-5)); padding-bottom: max(2rem, 5svh); }
+  .hero__dente-pos { position: relative; right: auto; top: auto; align-self: center; margin-bottom: auto; padding-bottom: var(--sc-5); width: min(44vw, 24svh);
+    transform: translate3d(0, calc(var(--sc-p, 0) * -40px), 0) rotate(calc(var(--sc-p, 0) * 12deg - 5deg)) scale(calc(1 + var(--sc-p, 0) * 0.08)); }
+  .hero__anel { width: min(88vw, 46svh); right: 50%; top: calc(var(--bar-h) + var(--sc-5) + min(22vw, 12svh) * 1.3);
     transform: translate3d(50%, calc(-50% + var(--sc-p, 0) * -40px), 0) scale(calc(1 + var(--sc-p, 0) * 0.12)); }
   .hero__eco { width: 130vw; right: -50vw; top: -6svh; }
-  .hero__copy { right: var(--sc-gutter); max-width: none; bottom: max(2rem, 5svh); }
+  .hero__copy { max-width: none; }
   .hero__titulo { font-size: clamp(2.1rem, 9vw, 2.9rem); }
   .hero__horario { font-size: var(--sc-t-xs); }
   .hero__sub { font-size: var(--sc-t-base); margin: var(--sc-4) 0 var(--sc-5); }
@@ -453,5 +458,5 @@ body { background: var(--sc-canvas); }
   .sorriso { --close-p: 1; }
 }
 @media (prefers-reduced-motion: reduce) and (max-width: 860px) {
-  .hero__dente-pos { transform: translate3d(-50%, 0, 0); }
+  .hero__dente-pos { transform: none; }
 }
